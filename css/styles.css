@@ -19,7 +19,7 @@ img{
     height: 250px;
 }
 .hero{
-    background-image: url("/images/extras/bg.jpg");
+    background-image: url("//images/extras/bg.jpg");
     background-repeat: no-repeat; 
     background-size: cover;
     margin: 0;
