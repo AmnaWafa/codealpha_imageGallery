@@ -1,0 +1,207 @@
+body{
+    background-color: #f4f4f4;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F7F7;
+    color: #333333;
+}
+h1, h2, h3, h4, h5, h6, button{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+img{
+    width: 100%;
+}
+.image-selection img{
+    height: 250px;
+}
+.hero{
+    background-image: url("/images/extras/bg.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+.hero a, #home-btn{
+    text-decoration: none;
+    color: #F7F7F7;
+}
+#nature{
+    background-image: linear-gradient(to bottom right, #A4E4A0, #C2E3C9);
+}
+#art{
+    background-image: linear-gradient(to bottom right, #D9C8E6, #E9D5F8);
+}
+#architecture{
+    background-image: linear-gradient(to bottom right,#B0C7D4, #D8DEE4);
+}
+#portraits{
+    background-image: linear-gradient(to bottom right, #FFD8C2, #FF9F80);
+}
+button{
+    background-color: #333333;
+    color: #F7F7F7;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+button:hover{
+    background-color: #292929;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition-timing-function: 1s;
+}
+#container-category{
+    text-align: center;
+    margin-top: 20px;
+}
+#categories{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin: 15px 10px;
+}
+#categories a{
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #b7b7c0;
+}
+#about{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 15px 10px;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+#inner-about{
+    padding: 20px;
+}
+#newsletter{
+    text-align: center;
+    margin-top: 50px;
+}
+#newsletter input{
+    width: 50%;
+    margin: 10px;
+    padding: 5px 0;
+}
+#footer{
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 20px;
+    text-align: center;
+}
+#footer img{
+    max-width: 30px;
+}
+#copyrights{
+    margin-top: 35px;
+    font-size: small;
+}
+.image-selection{
+    margin-top: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+.image-selection img{
+    margin: 3px 3px;
+}
+.image-selection img:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+#architecture-page .image-selection img:hover{
+    box-shadow:5px 5px 10px #D8DEE4 ;
+}
+#art-page .image-selection img:hover{
+    box-shadow:5px 5px 10px #E9D5F8 ;
+}
+#nature-page .image-selection img:hover{
+    box-shadow:5px 5px 10px #C2E3C9 ;
+}
+#portraits-page .image-selection img:hover{
+    box-shadow:5px 5px 10px #FFD8C2;
+}
+#lightbox{
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+}
+#lightbox.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.primary-image{
+    text-align: center;
+}
+.primary-image img{
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1;
+    padding: 4px;
+    background-color: #333333;
+    /* border: 1px solid #F7F7F7; */
+}
+.thumbnails{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.thumbnails img{
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    margin: 5px;
+}
+
+
+@media(max-width: 768px){
+    #about{
+        grid-template-columns: 1fr;
+    }
+    #container-category p{
+        padding: 10px;
+    }
+    #categories a{
+        margin: 10px 0;
+    }
+    #newsletter p{
+        padding: 10px;
+    }
+    #categories{
+        grid-template-columns: 1fr;
+    }
+    .image-selection{
+        grid-template-columns: 1fr;
+    }
+    .image-selection img{
+        width: 100%;
+        height: 100%;
+    }
+    .thumbnails{
+        flex-wrap: wrap;
+    }
+    .primary-image img{
+        width: 70%;
+        max-width: 350px;
+    }
+}
